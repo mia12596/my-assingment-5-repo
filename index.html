@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body>
+    <header class="bg-[rgb(249,247,243)] sticky top-0 z-50  py-6">
+        <div class="flex justify-between max-w-[1200px] container mx-auto mt-5">
+            <button class=" bg-[rgb(180,240,97)]  font-bold rounded-md px-4">Blog</button>
+            <div class="flex space-x-2 items-center">
+                <img src="assets/logo.png" alt="">
+                <h1>Donate Bangladesh</h1>
+            </div>
+            <div class="flex space-x-2 items-center ">
+                <img src="assets/coin.png" alt="">
+                <h1 id="bank">5500 </h1>
+            </div>
+        </div>
+
+    </header>
+    <div class="flex sticky top-0 z-10  space-x-2 mt-14 items-center justify-center">
+        <div>
+            <button id="donation" class="bg-[rgb(180,240,97)] font-bold py-3 px-3 rounded-md">Donation</button>
+        </div>
+        <div>
+            <button id="history" class="ont-bold py-3 px-3 rounded-md">History</button>
+            <div id="history-section" class="hidden">
+                <ul id="donation-history"></ul>
+            </div>
+
+        </div>
+    </div>
+    <main>
+
+
+        <div id="hidden">
+            <div class="max-w-[1200px] container mx-auto mt-5">
+                <div class="sm:flex  space-x-4 items-center">
+                    <div class="w-[50%]">
+                        <img src="assets/noakhali.png" alt="">
+                    </div>
+                    <div class="w-[50%] ">
+                        <div class="flex space-x-3">
+                            <img src="assets/coin.png" alt="">
+                            <button id="total">500 </button>
+                        </div>
+                        <h1 class="font-bold">Donate for Flood at Noakhali, Bangladesh</h1>
+                        <p> The recent floods in Noakhali have caused significant damage to homes infrastructure. Your
+                            donation
+                            will help provide essential supplies and to those affected by this disaster. Every
+                            contribution,
+                            big
+                            or small, makes difference. Please join us in supporting the relief efforts and making a
+                            positive
+                            impact on the lives of those in need.</p>
+                        <input class="mt-4 border-2 w-[100%] border-green-300 rounded-md" id="amount" type="number"
+                            placeholder="write your amount">
+                        <div>
+                            <button id="donate-button"
+                                class="bg-[rgb(180,240,97)] w-[100%] mt-4 font-bold rounded-md px-4 py-2">Donate
+                                now</button>
+
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="max-w-[1200px] container mx-auto mt-5">
+                <div class="sm:flex space-x-4 items-center">
+                    <div class="w-[50%]">
+                        <img src="assets/noakhali.png" alt="">
+                    </div>
+                    <div class="w-[50%]">
+                        <div class="flex space-x-3">
+                            <img src="assets/coin.png" alt="">
+                            <button id="total2">500 </button>
+                        </div>
+                        <h1 class="font-bold">Donate for Flood at Noakhali, Bangladesh</h1>
+                        <p> The recent floods in Noakhali have caused significant damage to homes infrastructure. Your
+                            donation
+                            will help provide essential supplies and to those affected by this disaster. Every
+                            contribution,
+                            big
+                            or small, makes difference. Please join us in supporting the relief efforts and making a
+                            positive
+                            impact on the lives of those in need.</p>
+                        <input class="mt-4 border-2 w-[100%] border-green-300 rounded-md" id="amount2" type="number"
+                            placeholder="write your amount">
+                        <div>
+                            <button id="donate-button2"
+                                class="bg-[rgb(180,240,97)] w-[100%] mt-4 font-bold rounded-md px-4 py-2">Donate
+                                now</button>
+
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="max-w-[1200px] container mx-auto mt-5">
+                <div class="sm:flex space-x-4 items-center">
+                    <div class="w-[50%]">
+                        <img src="assets/noakhali.png" alt="">
+                    </div>
+                    <div class="w-[50%]">
+                        <div class="flex space-x-3">
+                            <img src="assets/coin.png" alt="">
+                            <button id="total3 ">500 </button>
+                        </div>
+                        <h1 class="font-bold">Donate for Flood at Noakhali, Bangladesh</h1>
+                        <p> The recent floods in Noakhali have caused significant damage to homes infrastructure. Your
+                            donation
+                            will help provide essential supplies and to those affected by this disaster. Every
+                            contribution,
+                            big
+                            or small, makes difference. Please join us in supporting the relief efforts and making a
+                            positive
+                            impact on the lives of those in need.</p>
+                        <input class="mt-4 border-2 w-[100%] border-green-300 rounded-md" id="amount3" type="number"
+                            placeholder="write your amount">
+
+
+                        <div>
+                            <button id="donate-button3"
+                                class="bg-[rgb(180,240,97)] w-[100%] mt-4 font-bold rounded-md px-4 py-2">Donate
+                                now</button>
+
+                        </div>
+                        <div id="popup-modal"
+                            class="fixed inset-0 bg-gray-900 bg-opacity-50 hidden flex justify-center items-center z-50">
+                            <div class="bg-white p-6 rounded-md shadow-md max-w-sm w-full text-center">
+                                <div class="flex flex-col justify-center items-center">
+                                    <h2 class="text-lg font-bold mb-4">Congrates!</h2>
+                                    <img src="assets/coin.png" alt="">
+                                    <p class="mb-4">Your have donated for humankind.</p>
+                                    <span>successfully</span>
+                                    <button id="close-popup"
+                                        class="bg-green-500 mt-3 text-white py-2 px-4 rounded-md">Close
+                                        Confirmation</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </main>
+
+    <footer class="bg-[rgb(249,247,243)] h-44 w-screen mt-10">
+
+    </footer>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
+
+
+
+
+
+
+<!-- echo "# my-assingment-5-repo" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/mia12596/my-assingment-5-repo.git
+git push -u origin main -->
