@@ -35,7 +35,7 @@ function handleDonation(buttonId, totalId, amountInputId, historyListId) {
     });
 }
 
-// Function to add donations to history
+
 function addDonationToHistory(donationAmount, historyListId) {
     const li = document.createElement('li');
     li.classList.add('flex', 'display-block', 'py-2', 'border-b', 'border-gray-300');
@@ -44,7 +44,9 @@ function addDonationToHistory(donationAmount, historyListId) {
     const dateString = now.toLocaleString();
 
     const amountElement = document.createElement('div');
-    amountElement.textContent = `Amount: ${donationAmount} Taka`;
+    amountElement.textContent = `Amount: ${donationAmount} Taka
+    
+    `;
     amountElement.classList.add('text-green-600', 'w-1/3', 'text-center');
 
     const dateTime = document.createElement('div');
@@ -56,6 +58,8 @@ function addDonationToHistory(donationAmount, historyListId) {
 
     document.getElementById(historyListId).appendChild(li);
 }
+
+
 
 // Toggle views between Donation and History
 document.getElementById('donation').addEventListener('click', function () {
