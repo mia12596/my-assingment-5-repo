@@ -11,19 +11,29 @@
 </head>
 
 <body id="">
-    <header id="" class="bg-[rgb(249,247,243)]  p-5 backdrop-blur-md bg-opacity-80 sticky top-0 z-50 py-6 ">
-        <div class="flex justify-between p-5 space-x-2 sm:p-0  max-w-[1200px] container mx-auto mt-5">
-            <button id="blogButton" class=" bg-[rgb(180,240,97)]  font-bold rounded-md px-4">Blog</button>
-            <div class="flex space-x-2 items-center">
-                <img src="assets/logo.png" alt="">
-                <h1 class="font-bold">Donate Bangladesh</h1>
-            </div>
-            <div class="flex space-x-2 items-center ">
-                <img src="assets/coin.png" alt="">
-                <h1 id="bank">5500 </h1><span>BDT</span>
+    <header id="" class="bg-white p-5 backdrop-blur-md bg-opacity-80 sticky top-0 z-50 ">
+        <div class="dropdown sm:hidden">
+            <div tabindex="0" role="button" class="btn m-1">Click</div>
+            <ul tabindex="0" class="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow">
+                <li><a>blogButton</a></li>
+                <li><a>Item 2</a></li>
+            </ul>
+        </div>
+        <div class="bg-[rgb(249,247,243)]  ">
+            <div class="flex justify-between p-5 space-x-2 sm:p-0  max-w-[1200px] container mx-auto py-10 ">
+                <button id="blogButton"
+                    class=" bg-[rgb(180,240,97)]  hidden sm:block  font-bold rounded-md px-4">Blog</button>
+                <div class="flex space-x-2 items-center">
+                    <img class=" hidden sm:block" src="assets/logo.png" alt="">
+                    <h1 class="font-bold  hidden sm:block">Donate Bangladesh</h1>
+                </div>
+                <div class="flex space-x-2 items-center ">
+                    <img class=" " src="assets/coin.png" alt="">
+                    <h1 class=" " id="bank">5500 </h1><span class=" ">BDT</span>
+                </div>
             </div>
         </div>
-        <div class="flex sticky top-0 z-10  space-x-2 mt-14 items-center justify-center">
+        <div class=" flex sticky top-0 z-10  space-x-2 mt-16 items-center justify-center">
             <div>
                 <button id="donation" class="bg-[rgb(180,240,97)] font-bold py-3 px-3 rounded-md">Donation</button>
             </div>
@@ -53,7 +63,7 @@
                         <div class="w-[100%] mt-5 sm:w-[50%]">
                             <div class="flex space-x-3">
                                 <img src="assets/coin.png" alt="">
-                                <button id="total">500</button>
+                                <button class="bg-[rgb(17,17,17,0.05)] px-2 " id="total">500</button>
                             </div>
                             <h1 class="font-bold">Donate for Flood at Noakhali, Bangladesh</h1>
                             <p>
@@ -167,7 +177,7 @@
         </div>
     </main>
 
-    <footer class="bg-[rgb(249,247,243)] h-44 max-w-[1200px] mt-10">
+    <footer class="bg-[rgb(249,247,243)] h-44 w-screen mt-10">
 
     </footer>
     <script src="js/index.js"></script>
