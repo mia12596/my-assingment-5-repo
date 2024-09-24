@@ -3,13 +3,6 @@
 document.getElementById('blogButton').addEventListener('click', function () {
     window.location.href = 'blog.html';
 });
-
-
-
-
-
-
-
 function handleDonation(buttonId, totalId, amountInputId, historyListId) {
     document.getElementById(buttonId).addEventListener('click', function () {
         const bank = document.getElementById('bank').innerText;
@@ -18,7 +11,7 @@ function handleDonation(buttonId, totalId, amountInputId, historyListId) {
         const donationAmount = parseFloat(amount);
 
         if (!isNaN(donationAmount) && donationAmount > 0) {
-            // Update total donation and bank balance
+
             const newBankAmount = bankAmount + donationAmount;
             const totalDonation = document.getElementById(totalId).innerText;
             const totalDonationAmount = parseFloat(totalDonation);
@@ -27,13 +20,13 @@ function handleDonation(buttonId, totalId, amountInputId, historyListId) {
             document.getElementById(totalId).innerText = newTotalDonation;
             document.getElementById('bank').innerText = newBankAmount;
 
-            // Show the popup modal
+
             document.getElementById('popup-modal').classList.remove('hidden');
 
-            // Add donation to history
+
             addDonationToHistory(donationAmount, historyListId);
 
-            // Clear the donation input field
+
             document.getElementById(amountInputId).value = '';
         } else {
             alert('Please enter a valid donation amount.');
@@ -67,34 +60,32 @@ function addDonationToHistory(donationAmount, historyListId) {
 
 
 
-// Toggle views between Donation and History
+
 document.getElementById('donation').addEventListener('click', function () {
-    // Show donation section and hide history section
+
     document.getElementById('hidden').classList.remove('hidden');
     document.getElementById('history-section').classList.add('hidden');
 
-    // Add active state to the donation button, remove from history
-    this.classList.add('bg-green-400'); // Assuming you use 'bg-active' as a custom class for active state
+    this.classList.add('bg-green-400');
     document.getElementById('history').classList.remove('bg-green-400');
 });
 
 document.getElementById('history').addEventListener('click', function () {
-    // Show history section and hide donation section
+
     document.getElementById('hidden').classList.add('hidden');
     document.getElementById('history-section').classList.remove('hidden');
 
-    // Add active state to the history button, remove from donation
-    this.classList.add('bg-green-400'); // Same 'bg-active' class as above
+
+    this.classList.add('bg-green-400');
     document.getElementById('donation').classList.remove('bg-green-400');
 });
 
 
-// Initialize donation buttons
+
 handleDonation('donate-button', 'total', 'amount', 'history-section');
 handleDonation('donate-button2', 'total2', 'amount2', 'history-section');
 handleDonation('donate-button3', 'total3', 'amount3', 'history-section');
 
-// Close the popup modal
 document.getElementById('close-popup').addEventListener('click', function () {
     document.getElementById('popup-modal').classList.add('hidden');
 });
