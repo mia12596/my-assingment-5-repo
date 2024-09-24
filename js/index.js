@@ -4,6 +4,12 @@ document.getElementById('blogButton').addEventListener('click', function () {
     window.location.href = 'blog.html';
 });
 
+
+
+
+
+
+
 function handleDonation(buttonId, totalId, amountInputId, historyListId) {
     document.getElementById(buttonId).addEventListener('click', function () {
         const bank = document.getElementById('bank').innerText;
@@ -45,7 +51,7 @@ function addDonationToHistory(donationAmount, historyListId) {
 
     const amountElement = document.createElement('div');
     amountElement.textContent = `Amount: ${donationAmount} Taka
-    
+
     `;
     amountElement.classList.add('text-green-600', 'w-1/3', 'text-center');
 
