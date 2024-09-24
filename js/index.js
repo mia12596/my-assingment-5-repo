@@ -69,18 +69,25 @@ function addDonationToHistory(donationAmount, historyListId) {
 
 // Toggle views between Donation and History
 document.getElementById('donation').addEventListener('click', function () {
+    // Show donation section and hide history section
     document.getElementById('hidden').classList.remove('hidden');
     document.getElementById('history-section').classList.add('hidden');
-    this.classList.add('bg-[rgb(180,240,97)]');
-    document.getElementById('history').classList.remove('bg-[rgb(180,240,97)]');
+
+    // Add active state to the donation button, remove from history
+    this.classList.add('bg-green-400'); // Assuming you use 'bg-active' as a custom class for active state
+    document.getElementById('history').classList.remove('bg-green-400');
 });
 
 document.getElementById('history').addEventListener('click', function () {
+    // Show history section and hide donation section
     document.getElementById('hidden').classList.add('hidden');
     document.getElementById('history-section').classList.remove('hidden');
-    this.classList.add('bg-[rgb(180,240,97)]');
-    document.getElementById('donation').classList.remove('bg-[rgb(180,240,97)]');
+
+    // Add active state to the history button, remove from donation
+    this.classList.add('bg-green-400'); // Same 'bg-active' class as above
+    document.getElementById('donation').classList.remove('bg-green-400');
 });
+
 
 // Initialize donation buttons
 handleDonation('donate-button', 'total', 'amount', 'history-section');
