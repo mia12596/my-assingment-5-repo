@@ -78,8 +78,8 @@ document.getElementById('donation').addEventListener('click', function () {
 document.getElementById('history').addEventListener('click', function () {
     document.getElementById('hidden').classList.add('hidden');
     document.getElementById('history-section').classList.remove('hidden');
-    this.classList.add('bg-[rgb(180,240,97)]');
-    document.getElementById('donation').classList.remove('bg-[rgb(180,240,97)]');
+    this.classList.add('bg-green-400');
+    document.getElementById('donation').classList.remove('bg-green-400');
 });
 
 // Initialize donation buttons
