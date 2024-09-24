@@ -73,7 +73,7 @@ document.getElementById('history').addEventListener('click', function () {
 });
 
 // Initialize donation buttons
-handleDonation('donate-button', 'total', 'amount', 'history-section', 'floood');
+handleDonation('donate-button', 'total', 'amount', 'history-section');
 handleDonation('donate-button2', 'total2', 'amount2', 'history-section');
 handleDonation('donate-button3', 'total3', 'amount3', 'history-section');
 
